@@ -46,3 +46,32 @@ func MergeSort(xs []int) []int {
 
 	return mergeArs(v1, v2)
 }
+
+func InsertionSort(xs []int) []int {
+	for k := 1; k < len(xs); k++ {
+		elemToMove := xs[k]
+		j := k - 1
+		for j >= 0 && elemToMove <= xs[j] {
+			xs[j+1] = xs[j]
+			j--
+		}
+		xs[j+1] = elemToMove
+	}
+	return xs
+}
+
+func BubbleSort(xs []int) []int {
+	swapsMade := true
+	for swapsMade == true {
+		swapsMade = false
+		for k := 0; k < len(xs)-1; k++ {
+			if xs[k] > xs[k+1] {
+				temp := xs[k]
+				xs[k] = xs[k+1]
+				xs[k+1] = temp
+				swapsMade = true
+			}
+		}
+	}
+	return xs
+}

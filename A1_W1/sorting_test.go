@@ -25,3 +25,21 @@ func TestMergesort(t *testing.T) {
 	assert.Equal(4, res[2])
 	assert.Equal(6, res[3])
 }
+func TestInsertionSort(t *testing.T) {
+	assert := assert.New(t)
+	res := InsertionSort([]int{3, 1, 6, 4})
+	assert.Equal(4, len(res))
+	assert.Equal(1, res[0])
+	assert.Equal(3, res[1])
+	assert.Equal(4, res[2])
+	assert.Equal(6, res[3])
+}
+func TestBubbleSort(t *testing.T) {
+	assert := assert.New(t)
+	res := BubbleSort([]int{3, 1, 6, 4})
+	assert.Equal(4, len(res))
+	assert.Equal(1, res[0])
+	assert.Equal(3, res[1])
+	assert.Equal(4, res[2])
+	assert.Equal(6, res[3])
+}
